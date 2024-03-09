@@ -35,7 +35,7 @@
     │   ├── models.py
     │   ├── tests.py
     │   └── views.py
-    ├── db.sqlite3 # After migration
+    ├── db.sqlite3
     ├── manage.py
     └── .venv/
     ```
@@ -59,6 +59,7 @@
   - requires tweaking in `django_project/setting.py`
     - `TEMPLATES` list - `"DIRS": [BASE_DIR / "templates"]`
 - Generic Class Based View : `django.views.generic`
+  - `TemplateView`
 - `as_view()` for CBVs
 - Template-Inheritance using templating language `{% %}`
 - `django.test`
@@ -66,7 +67,41 @@
 - Deployement Checllist
 
 ## Chapter 4: Message Board App
-- 
+- Activating models - after creating them
+  - `python manage.py makemigrations app-name`
+  - `python manage.py migrate`
+- Admin User
+  - `python manage.py createsuperuser`
+- Model Registration
+  - `app-name/admin.py`
+  - `admin.site.register(model_name)`
+- `__str__()` method
+- `ListView`
+- `TestCase`
+  - `setUpTestData()` hook - to create a test data
+  - `@classmethod` decorator
+  - `cls` parameter -> `self`
+  - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
