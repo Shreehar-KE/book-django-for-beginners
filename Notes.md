@@ -40,7 +40,7 @@
     └── .venv/
     ```
 - Add *app* to `django_project/settings.py`
-  - `INSTALLED_APPS` list - `app-name.apps.app-nameConfig`
+  - `INSTALLED_APPS` list - `app-name.apps.App-nameConfig`
 - FBVs v/s CBVs v/s GCBVs
 - CBVs means DRY rule, concise code due to abstraction, extendability using mixins
 - Add *view function* to `app-name/urls.py`
@@ -48,12 +48,28 @@
 - *Include* the `app-name.urls` to `django_project/urls.py`
   
 ## Chapter 3: Pages App
+- Default Templates Folder Structure
+    ```
+    └── app-name
+        ├── templates
+            ├── app-name
+                ├── template.html
+    ```
+- Using single project-level templates directory
+  - requires tweaking in `django_project/setting.py`
+    - `TEMPLATES` list - `"DIRS": [BASE_DIR / "templates"]`
+- Generic Class Based View : `django.views.generic`
+- `as_view()` for CBVs
+- Template-Inheritance using templating language `{% %}`
+- `django.test`
+  - test case classes: **SimpleTestCase**, **TestCase**, **TransactionTestCase** and **LiveServerTestCase**
+- Deployement Checllist
+
+## Chapter 4: Message Board App
 - 
 
 
 
-
-## Chapter 4: Message Board App
 ## Chapter 5: Blog App
 ## Chapter 6: Forms
 ## Chapter 7: User Accounts
