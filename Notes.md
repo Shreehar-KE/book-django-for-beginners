@@ -81,31 +81,32 @@
   - `setUpTestData()` hook - to create a test data
   - `@classmethod` decorator
   - `cls` parameter -> `self`
-  - 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Chapter 5: Blog App
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Chapter 6: Forms
 ## Chapter 7: User Accounts
 ## Chapter 8: Custom User Model
