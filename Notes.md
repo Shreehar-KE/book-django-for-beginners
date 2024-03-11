@@ -2,6 +2,7 @@
 
 ## Chapter 1: Inital Setup
 - `django-admin startproject django_project .` - to create a new Django project
+- `python manage.py runserver` - to run the django project
 
 ## Chapter 2: Hello World App
 - `python manage.py migrate`
@@ -59,12 +60,12 @@
   - requires tweaking in `django_project/setting.py`
     - `TEMPLATES` list - `"DIRS": [BASE_DIR / "templates"]`
 - Generic Class Based View : `django.views.generic`
-  - `TemplateView`
+  - *`TemplateView`*
 - `as_view()` for CBVs
 - Template-Inheritance using templating language `{% %}`
 - `django.test`
-  - test case classes: **SimpleTestCase**, **TestCase**, **TransactionTestCase** and **LiveServerTestCase**
-- Deployement Checllist
+  - test case classes: *`SimpleTestCase`*, *`TestCase`*, *`TransactionTestCase`* and *`LiveServerTestCase`*
+- Deployement Checklist
 
 ## Chapter 4: Message Board App
 - Activating models - after creating them
@@ -76,13 +77,25 @@
   - `app-name/admin.py`
   - `admin.site.register(model_name)`
 - `__str__()` method
-- `ListView`
-- `TestCase`
+- *`ListView`*
+- *`TestCase`*
   - `setUpTestData()` hook - to create a test data
   - `@classmethod` decorator
   - `cls` parameter -> `self`
 
 ## Chapter 5: Blog App
+- ForeignKey : `auth.User`
+- Static Files
+  - `STATIC_URL` & `STATICFILES_DIRS` at `settings.py`
+  - `{% load static %}`
+  - `<link rel="stylesheet" href="{% static 'css/base.css' %}">`
+- *`DetailView`*
+  - `context_object_name`
+- `pk`: auto-incementing primary key in DB
+- Testing User Model
+  - `get_user_model()`
+
+## Chapter 6: Forms
 - 
 
 
@@ -105,9 +118,6 @@
 
 
 
-
-
-## Chapter 6: Forms
 ## Chapter 7: User Accounts
 ## Chapter 8: Custom User Model
 ## Chapter 9: User Authentication
