@@ -90,12 +90,38 @@
   - `{% load static %}`
   - `<link rel="stylesheet" href="{% static 'css/base.css' %}">`
 - *`DetailView`*
+  - `/post/pk/` url
   - `context_object_name`
 - `pk`: auto-incementing primary key in DB
 - Testing User Model
   - `get_user_model()`
 
 ## Chapter 6: Forms
+- *`CreateView`*
+  - `fields` attribute 
+    - `__all__`
+  - `post` form
+    - `csrf_token`
+- *`UpdateView`*
+  - `/post/pk/edit` url
+- *`DeleteView`*
+  - `success_url` attribute
+    - `reverse_lazy()` : won't redirect until the deleting is finished
+    - doesn't needed in *`CreateView`* & *`UpdateView`* because of `get_absolute_url()` in `Post` model
+- Testing
+  - `302` status code for redirect
+  
+## Chapter 7: User Accounts
+- `auth` app & `User` object
+- *`LoginView`*
+  - urls from `django.contrib.auth.urls`
+  - `LOGIN_REDIRECT_URL` & `LOGOUT_REDIRECT_URL` in `settings.py`
+  - `is_authenticated` attribute
+  - Using ~~link~~ form(POST) for *Logout*
+- `UserCreationForm` from `django.contrib.auth.forms`
+  - can override the `form_valid()` to automatically login the User
+
+## Chapter 8: Custom User Model
 - 
 
 
@@ -118,8 +144,6 @@
 
 
 
-## Chapter 7: User Accounts
-## Chapter 8: Custom User Model
 ## Chapter 9: User Authentication
 ## Chapter 10: Bootstrap
 ## Chapter 11: Password Change and Reset
