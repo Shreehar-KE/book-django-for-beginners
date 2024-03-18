@@ -45,7 +45,7 @@
 - FBVs v/s CBVs v/s GCBVs
 - CBVs means DRY rule, concise code due to abstraction, extendability using mixins
 - Add *view function* to `app-name/urls.py`
-  - `URL_PATTERNS` list - (regex for url, reference for view function, view's name)
+  - `URL_PATTERNS` list - (*regex for url, reference for view function, view's name*)
 - *Include* the `app-name.urls` to `django_project/urls.py`
   
 ## Chapter 3: Pages App
@@ -122,8 +122,12 @@
   - can override the `form_valid()` to automatically login the User
 
 ## Chapter 8: Custom User Model
+- `AbstractUser` from `auth.models` to create a Customer User Model
+- `null` v/s `blank` in model fields
+- `UserCreationForm` & `UserChangeForm` from `auth.forms` for new Sign-up & edit
+- modifying `admin.py` to create CustomUserAdmin based on `UserAdmin` from `auth.admin`
+  - `add_form`,`form`, `model`, `list_display`,`fieldsets`,`add_fieldsets`
 - 
-
 
 
 
