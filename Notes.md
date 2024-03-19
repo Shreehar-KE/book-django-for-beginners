@@ -114,11 +114,12 @@
 ## Chapter 7: User Accounts
 - `auth` app & `User` object
 - *`LoginView`*
+  - `templates/registration/` for `login.html` & `signup.html`
   - urls from `django.contrib.auth.urls`
   - `LOGIN_REDIRECT_URL` & `LOGOUT_REDIRECT_URL` in `settings.py`
   - `is_authenticated` attribute
   - Using ~~link~~ form(POST) for *Logout*
-- `UserCreationForm` from `django.contrib.auth.forms`
+- `UserCreationForm` from `django.contrib.auth.forms` for signup form 
   - can override the `form_valid()` to automatically login the User
 
 ## Chapter 8: Custom User Model
@@ -127,9 +128,11 @@
 - `UserCreationForm` & `UserChangeForm` from `auth.forms` for new Sign-up & edit
 - modifying `admin.py` to create CustomUserAdmin based on `UserAdmin` from `auth.admin`
   - `add_form`,`form`, `model`, `list_display`,`fieldsets`,`add_fieldsets`
-- 
 
-
+## Chapter 9: User Authentication
+-  using `TemplateView` directly in `urls.py`
+   -  `path("", TemplateView.as_view(template_name="home.html"), name="home")`
+-  customizing the `fields` attribute in `Meta` class for including new fields in the signup form
 
 
 
