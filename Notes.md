@@ -56,7 +56,7 @@
             ├── app-name
                 ├── template.html
     ```
-- Using single project-level templates directory
+- Using single project-level templates directory vs App-level templates directory
   - requires tweaking in `django_project/setting.py`
     - `TEMPLATES` list - `"DIRS": [BASE_DIR / "templates"]`
 - Generic Class Based View : `django.views.generic`
@@ -134,25 +134,24 @@
    -  `path("", TemplateView.as_view(template_name="home.html"), name="home")`
 -  customizing the `fields` attribute in `Meta` class for including new fields in the signup form
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Chapter 9: User Authentication
 ## Chapter 10: Bootstrap
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Chapter 11: Password Change and Reset
 ## Chapter 12: Email
 ## Chapter 13: Newspaper App
