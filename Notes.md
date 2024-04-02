@@ -127,7 +127,7 @@
 - `AbstractUser` from `auth.models` to create a Customer User Model
 - `null` v/s `blank` in model fields
   - empty string '' instead of `NULL` for string based fields
-- updating `UserCreationForm` & `UserChangeForm` from `auth.forms` for new Sign-up & edit
+- updating `UserCreationForm` & `UserChangeForm` from `auth.forms` in `accounts/forms.py` for new Sign-up & edit 
 - modifying `admin.py` to create `CustomUserAdmin` based on `UserAdmin` from `auth.admin`
   - `add_form`,`form`, `model`, `list_display`,`fieldsets`,`add_fieldsets`
 - registering both `CustomUser` & `CustomUserAdmin` in `admin.py`
@@ -138,24 +138,45 @@
 -  customizing the `fields` attribute in `Meta` class for including new fields in the signup form
 
 ## Chapter 10: Bootstrap
-- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Bootstrap Starter Template in `base.html`
+  - `meta="viewport"` 
+  - Bootstrap CDN for CSS & Js
+- Available in all pages through template inheritance
+- `django-crispy-forms` package
+  - `{% load crispy_forms_tags %}`
+  - `{{ form|crispy }}`
 
 ## Chapter 11: Password Change and Reset
+- Views & Urls for Password Change are already provided by Django
+- 2 templates are needed to be overriden for custom password change 
+  - `templates/registration/password_change_form.html`
+  - `templates/registration/password_change_done.html`
+- `Console Backend`
+  - `EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"` in `settings.py`
+- 4 templates are needed to be overriden for custom password reset
+  - `templates/registration/password_reset_form.html`
+  - `templates/registration/password_reset_done.html`
+  - `templates/registration/password_reset_confirm.html`
+  - `templates/registration/password_reset_complete.html`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Chapter 12: Email
 ## Chapter 13: Newspaper App
 ## Chapter 14: Permissions and Authorization
