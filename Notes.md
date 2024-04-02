@@ -85,6 +85,7 @@
 
 ## Chapter 5: Blog App
 - ForeignKey : `auth.User`
+  - on_delete option
 - Static Files
   - `STATIC_URL` & `STATICFILES_DIRS` at `settings.py`
   - `{% load static %}`
@@ -125,9 +126,11 @@
 ## Chapter 8: Custom User Model
 - `AbstractUser` from `auth.models` to create a Customer User Model
 - `null` v/s `blank` in model fields
-- `UserCreationForm` & `UserChangeForm` from `auth.forms` for new Sign-up & edit
-- modifying `admin.py` to create CustomUserAdmin based on `UserAdmin` from `auth.admin`
+  - empty string '' instead of `NULL` for string based fields
+- updating `UserCreationForm` & `UserChangeForm` from `auth.forms` for new Sign-up & edit
+- modifying `admin.py` to create `CustomUserAdmin` based on `UserAdmin` from `auth.admin`
   - `add_form`,`form`, `model`, `list_display`,`fieldsets`,`add_fieldsets`
+- registering both `CustomUser` & `CustomUserAdmin` in `admin.py`
 
 ## Chapter 9: User Authentication
 -  using `TemplateView` directly in `urls.py`
