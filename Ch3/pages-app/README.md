@@ -78,7 +78,7 @@ I followed this [YT playlist](https://www.youtube.com/playlist?list=PL5E1F5cTSTt
         ```
         ENVIRONMENT=production
         DATABASE_URL=/* Internal DB URL */
-        PYTHON_VERSION=3.11.3
+        PYTHON_VERSION=/* Your Python Version */
         ```
       5. Finish
    2. After the Initial Deployment
