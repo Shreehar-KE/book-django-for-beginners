@@ -88,3 +88,18 @@
 ## Chapter 5: Message Board App Deployment
 - Since [fly.io](https://fly.io/docs/about/billing/#payment-options) requires a credit card for registration, I used an alternate deployment service called [Render](https://www.render.com).
 - Refer to this [file](./Ch5/message-board-app/README.md) for full step-by-step instructions.
+
+## Chapter 6: Blog App
+- ForeignKey : `auth.User`
+  - on_delete option
+- Static Files
+  - `STATIC_URL` & `STATICFILES_DIRS` at `settings.py`
+  - `{% load static %}`
+  - `<link rel="stylesheet" href="{% static 'css/base.css' %}">`
+- *`DetailView`*
+  - `/post/pk/` url
+  - `context_object_name`
+- `pk`: auto-incementing primary key in DB
+- `href="{{post.get_absolute_url}}"`
+- Testing User Model
+  - `get_user_model()`
