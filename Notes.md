@@ -87,4 +87,4 @@
 
 ## Chapter 5: Message Board App Deployment
 - Since [fly.io](https://fly.io/docs/about/billing/#payment-options) requires a credit card for registration, I used an alternate deployment service called [Render](https://www.render.com).
-- Refer to this [file](./Ch3/pages-app/README.md) for full step-by-step instructions.
+- Refer to this [file](./Ch5/message-board-app/README.md) for full step-by-step instructions.
