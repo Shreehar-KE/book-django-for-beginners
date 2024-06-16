@@ -103,3 +103,17 @@
 - `href="{{post.get_absolute_url}}"`
 - Testing User Model
   - `get_user_model()`
+
+## Chapter 7: Forms
+- *`CreateView`*
+  - `fields` attribute 
+  - `post` methood for form
+    - `csrf_token`
+- *`UpdateView`*
+  - `/post/pk/edit` url
+- *`DeleteView`*
+  - `success_url` attribute
+    - `reverse_lazy()` : won't redirect until the deleting is finished
+    - doesn't needed in *`CreateView`* & *`UpdateView`* because of `get_absolute_url()` in `Post` model
+- Testing
+  - `302` status code for redirect
