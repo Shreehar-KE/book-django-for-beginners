@@ -130,3 +130,7 @@
   - can override the `form_valid()` to automatically login the User
 - `STATIC_ROOT` - target location for `collectstatic` command
   - `STORAGES` engine
+
+## Chapter 9: Blog Deployment
+- Since [fly.io](https://fly.io/docs/about/billing/#payment-options) requires a credit card for registration, I used an alternate deployment service called [Render](https://www.render.com).
+- Refer to this [file](./Ch9/blog-app/README.md) for full step-by-step instructions.
