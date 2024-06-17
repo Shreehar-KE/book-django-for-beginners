@@ -117,3 +117,16 @@
     - doesn't needed in *`CreateView`* & *`UpdateView`* because of `get_absolute_url()` in `Post` model
 - Testing
   - `302` status code for redirect
+
+## Chapter 8: User Accounts
+- `auth` app & `User` object
+- *`LoginView`*
+  - `templates/registration/` for `login.html` & `signup.html`
+  - urls from `django.contrib.auth.urls`
+  - `LOGIN_REDIRECT_URL` & `LOGOUT_REDIRECT_URL` in `settings.py`
+  - `is_authenticated` attribute
+  - From Django 5.0, form(POST) should be used for *Logout* instead of a link
+- `UserCreationForm` from `django.contrib.auth.forms` for signup form 
+  - can override the `form_valid()` to automatically login the User
+- `STATIC_ROOT` - target location for `collectstatic` command
+  - `STORAGES` engine
