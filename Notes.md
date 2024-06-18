@@ -181,3 +181,11 @@
   - `list_display` in `admin.py`
 - `<int:pk>` : `int` - **path converter**
 - **CRUD** using `CreateView`, `UpdateView`, `DetailView`, `ListView`, `DeleteView`
+
+## Chapter 15: Permissions and Authorization
+- Authorization vs Authentication
+- `form_valid()` in `CreateView` to automatically assign the **logged-in user** as the **author** 
+- `LoginRequiredMixin` from `django.contrib.auth.mixins`
+- order of inherited mixins & classes are important
+- `UserPassesTestMixin` from `django.contrib.auth.mixins`
+  - `test_func()`, `self.get_obj()`, `obj.author`
