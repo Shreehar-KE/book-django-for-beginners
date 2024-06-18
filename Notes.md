@@ -158,3 +158,16 @@
 - `django-crispy-forms` package
   - `{% load crispy_forms_tags %}`
   - `{{ form|crispy }}`
+
+## Chapter 13: Password Change and Reset
+- Views & Urls for Password Change are already provided by Django
+- 2 templates are needed to be overriden for custom password change 
+  - `templates/registration/password_change_form.html`
+  - `templates/registration/password_change_done.html`
+- `Console Backend`
+  - `EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"` in `settings.py`
+- 4 templates are needed to be overriden for custom password reset
+  - `templates/registration/password_reset_form.html`
+  - `templates/registration/password_reset_done.html`
+  - `templates/registration/password_reset_confirm.html`
+  - `templates/registration/password_reset_complete.html`
