@@ -149,3 +149,12 @@
 -  using `TemplateView` directly in `urls.py`
    -  `path("", TemplateView.as_view(template_name="home.html"), name="home")`
 -  customizing the `fields` attribute in `Meta` class for including new fields in the signup form
+
+## Chapter 12: Bootstrap
+- Bootstrap Starter Template in `base.html`
+  - `meta="viewport"` 
+  - Bootstrap CDN for CSS & Js
+- Available in all pages through template inheritance
+- `django-crispy-forms` package
+  - `{% load crispy_forms_tags %}`
+  - `{{ form|crispy }}`
