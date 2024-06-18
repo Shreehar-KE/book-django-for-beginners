@@ -171,3 +171,13 @@
   - `templates/registration/password_reset_done.html`
   - `templates/registration/password_reset_confirm.html`
   - `templates/registration/password_reset_complete.html`
+
+## Chapter 14: Newspaper App 
+- `articles` app
+- `django.conf` to access `settings`
+  - `AUTH_USER_MODEL` to access `CustomUser` from `accounts` 
+  - recommened method for access in `models.py`, elsewhere `get_user_model()` is preferred
+- Custom admin for `articles` model 
+  - `list_display` in `admin.py`
+- `<int:pk>` : `int` - **path converter**
+- **CRUD** using `CreateView`, `UpdateView`, `DetailView`, `ListView`, `DeleteView`
