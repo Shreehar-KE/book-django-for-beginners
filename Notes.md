@@ -126,7 +126,7 @@
   - `LOGIN_REDIRECT_URL` & `LOGOUT_REDIRECT_URL` in `settings.py`
   - `is_authenticated` attribute
   - From Django 5.0, form(POST) should be used for *Logout* instead of a link
-- `UserCreationForm` from `django.contrib.auth.forms` for signup form 
+- `UserCreationForm` from `django.contrib.auth.forms` for signup form (`form_class`)
   - can override the `form_valid()` to automatically login the User
 - `STATIC_ROOT` - target location for `collectstatic` command
   - `STORAGES` engine
@@ -134,3 +134,13 @@
 ## Chapter 9: Blog Deployment
 - Since [fly.io](https://fly.io/docs/about/billing/#payment-options) requires a credit card for registration, I used an alternate deployment service called [Render](https://www.render.com).
 - Refer to this [file](./Ch9/blog-app/README.md) for full step-by-step instructions.
+
+## Chapter 10: Custom User Model
+- `AUTH_USER_MODEL` in `settings.py`
+- `AbstractUser` from `auth.models` to create a Customer User Model
+- `null` v/s `blank` in model fields
+  - empty string '' instead of `NULL` for string based fields
+- updating `UserCreationForm` & `UserChangeForm` from `auth.forms` in `accounts/forms.py` for new Sign-up & edit forms
+- modifying `admin.py` to create `CustomUserAdmin` based on `UserAdmin` from `auth.admin`
+  - `add_form`, `form`, `model`, `list_display`, `fieldsets`, `add_fieldsets`
+- registering both `CustomUser` & `CustomUserAdmin` in `admin.py`
