@@ -189,3 +189,14 @@
 - order of inherited mixins & classes are important
 - `UserPassesTestMixin` from `django.contrib.auth.mixins`
   - `test_func()`, `self.get_obj()`, `obj.author`
+
+## Chapter 16: Comments
+- `TabularInline` and `StackedInline` to display Foreign Key relationships in Django Admin
+  - `inlines` variable in `admin.py`
+- **Backward Relationship** query `model.FOO_set` where **FOO** is the lowercased name of the source model which has Foreign Key relationship with the model
+- `ModelForm`
+- `get_context_data()` in `DetailView`
+- `GET` vs `POST` views, Wrapper view
+- `FormMixin`
+- `SingleObjectMixin`
+  - `get_object()`
