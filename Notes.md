@@ -200,3 +200,7 @@
 - `FormMixin`
 - `SingleObjectMixin`
   - `get_object()`
+
+## Chapter 17: Deployment
+- - Since [fly.io](https://fly.io/docs/about/billing/#payment-options) requires a credit card for registration, I used an alternate deployment service called [Render](https://www.render.com).
+- Refer to this [file](./Ch17/news-app/README.md) for full step-by-step instructions.
