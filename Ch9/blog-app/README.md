@@ -40,6 +40,7 @@ I followed this [YT playlist](https://www.youtube.com/playlist?list=PL5E1F5cTSTt
             }
             ```
    4. Run `python manage.py collectstatic` 
+   5. 6. Add `{% load static %}` to the top of the base.html file.
 
 3. Sign-Up/Login to your Render account
    1. Create a new PostgreSQL service from the [Render](https://www.render.com) dashboard
